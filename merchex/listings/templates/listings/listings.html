@@ -1,0 +1,11 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <ul>
+	    {% for list in lists %}
+
+	    <li>{{ list.title|upper }}</li>
+     
+	    {% endfor %}
+	</ul>
+    {% endblock %}
