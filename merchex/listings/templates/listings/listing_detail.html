@@ -1,0 +1,18 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ list.title }}</h2>
+
+<ul>
+ <li>Types : {{ list.types }}</li>
+ <li>Année  : {{ list.year }}</li>
+ <li>Solde : {{ list.solde|yesno }}</li>
+</ul>
+
+<p>{{ list.description }}</p>
+  <a href="{% url 'listing-update' list.id %}">Modifier ce groupe</a>
+<a href="{% url 'listing-list' %}">Back to all listings</a>
+<a href="{% url 'listing-delete' list.id%}">Supprimer ce groupe</a>
+
+{% endblock %}

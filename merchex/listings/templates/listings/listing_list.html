@@ -1,0 +1,14 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <ul>
+	    {% for list in lists %}
+
+	    <li><a href="{% url 'listing-detail' list.id %}">{{ list.title|upper }}</a>- <a href="{% url 'listing-update' list.id %}">[modifier]</a> -<a href="{% url 'listing-delete' list.id %}">[supprimer]</a></li> 
+     
+	    {% endfor %}
+	</ul>
+    {% endblock %}
+    
+    
+    

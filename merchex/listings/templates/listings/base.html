@@ -3,7 +3,13 @@
     <head><title>Merchex</title>
     <link rel="stylesheet" href="{% static 'listings/styles.css' %}" /></head>
     <body>
-
+	<nav>
+     		<a href="{% url 'band-list' %}">Bands</a>
+     		
+     		<a href="{% url 'listing-list' %}">Listings</a>
+     		
+     		<a href="{% url 'contact' %}">Contact</a>
+   	</nav>
         {% block content %}{% endblock %}
 
     </body>

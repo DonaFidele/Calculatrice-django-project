@@ -1,1 +1,10 @@
-* { background-color: yellow; }
+* { background-color: pink; }
+
+nav
+{
+    display:flex;	
+    width: 300px;
+    justify-content: space-between;
+}
+
+.errorlist { margin-bottom: -10px }
